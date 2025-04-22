@@ -252,6 +252,18 @@ form textarea {
   .header-container {
     flex-direction: column;
     gap: 10px;
+    position: relative;
+  }
+  .header-container .menu-toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #000;
+    position: absolute;
+    top: 20px;
+    right: 30px;
   }
   nav ul {
     flex-direction: column;
