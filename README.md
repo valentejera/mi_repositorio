@@ -23,7 +23,7 @@ El proyecto está dividido en 5 secciones/páginas:
 
 ## 🔗 Enlaces útiles
 
-- Sitio en vivo: [fluffy-gingersnap-59aa46.netlify.app](https://fluffy-gingersnap-59aa46.netlify.app)
+- Sitio en vivo: [https://valentina-site.netlify.app/)
 - Repositorio: [github.com/valentejera/mi_repositorio](https://github.com/valentejera/mi_repositorio)
 
 ## 💬 Sobre mí
