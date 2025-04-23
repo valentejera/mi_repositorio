@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +47,12 @@ body {
 }
 .header-container nav ul li a:hover {
   color: #ff6600;
+}
+.header-container #menu-toggle {
+  display: none;
+}
+.header-container .menu-icon {
+  display: none;
 }
 
 .hero {
@@ -254,35 +261,43 @@ form textarea {
     gap: 10px;
     position: relative;
   }
-  .header-container .menu-toggle {
+  .header-container .menu-icon {
+    all: unset;
     display: block;
     font-size: 28px;
     cursor: pointer;
-    background: none;
-    border: none;
-    color: #000;
     position: absolute;
     top: 20px;
     right: 30px;
+    z-index: 2000;
+    transition: all 0.3s ease;
+  }
+  .header-container .menu-icon::before {
+    content: "☰";
+  }
+  .header-container #menu-toggle {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    width: 0;
+  }
+  nav {
+    display: none;
   }
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-  .hero-content {
-    flex-direction: column;
+  #menu-toggle:checked ~ .menu-icon::before {
+    content: "✖";
+  }
+  #menu-toggle:checked ~ nav {
+    display: block;
+    width: 100%;
     text-align: center;
-  }
-  .hero-text,
-  .hero-image {
-    max-width: 100%;
-  }
-  .grid-cards {
-    grid-template-columns: 1fr;
-  }
-  .customers ul {
-    grid-template-columns: 1fr;
   }
 }
 @keyframes fadeSlideUp {
