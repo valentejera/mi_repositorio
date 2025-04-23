@@ -154,6 +154,71 @@ body {
   }
 }
 
+.featured-projects {
+  text-align: center;
+  padding: 60px 20px;
+
+  .section-title {
+    color: $orange;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
+  .grid-cards {
+    .card {
+      background-color: $white;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      h4 {
+        font-size: 20px;
+        color: $black;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 15px;
+        color: $gray-dark;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+// ===================
+// About
+// ===================
+.about {
+  text-align: center;
+  padding: 60px 20px;
+
+  h2 {
+    color: $orange;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    color: $gray-dark;
+    line-height: 1.6;
+
+    a {
+      color: $orange;
+      text-decoration: underline;
+
+      &:hover {
+        color: $gray-dark;
+      }
+    }
+  }
+}
+
 // ===================
 // Footer
 // ===================
@@ -263,28 +328,83 @@ footer {
 // ===================
 // Contact form
 // ===================
-form {
+.contact {
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  background: $white;
-  border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
 
-  label {
-    margin-top: 10px;
-    font-weight: bold;
+  .hero-text {
+    max-width: 600px;
+    text-align: center;
+
+    h1 {
+      font-size: 36px;
+      color: $orange;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $gray-dark;
+    }
   }
 
-  input,
-  textarea {
+  .contact-form {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    max-width: 600px;
+    background: $white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: $gray-dark;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  }
+
+  .full-width {
+    grid-column: 1 / -1;
+  }
+
+  button {
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: $black;
+    color: $white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: $orange;
+      transform: scale(1.03);
+    }
   }
 }
 
